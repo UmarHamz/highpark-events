@@ -28,7 +28,7 @@ button{
 .row{
     align-items: center;
     --bs-gutter-x: 0;
-    font-size: 20px;
+    font-size: 22px;
 }
 .col-12 {
 
