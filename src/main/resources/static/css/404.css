@@ -1,0 +1,15 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-image: url("1453131583_anime-404-pesochnica-yuru-yuri-527330.jpeg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

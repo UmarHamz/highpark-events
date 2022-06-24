@@ -1,0 +1,240 @@
+body{
+    /*background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),aliceblue url("https://downloader.disk.yandex.ru/preview/2e4cfb068892dd967796865e93bdc33ad3c4781bee67d15d0b1641d2faba53d8/62b67061/rwkD9hMSv8mrDGQe9E74CYUgS1-Nm9LT8L10EoObq0-yHrstHL8s8J2H3CbjkoDKe-oRPZiCuL2elZHKNMdsEQ%3D%3D?uid=0&filename=%D0%9F%D1%83%D0%BB%D1%8C%D1%81%D0%B0%D1%80%202.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1291x964") no-repeat fixed;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),aliceblue url("../images/IMG_1113-2.webp") no-repeat fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+    line-height: 1.5;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+
+button{
+    max-width: 250px;
+}
+
+.btn .btn-primary{
+    background-color: #091965;
+}
+
+.main-image img {
+    width: 35px;
+}
+.row{
+    align-items: center;
+    --bs-gutter-x: 0;
+    font-size: 20px;
+}
+.col-12 {
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: white;
+}
+.cell {
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 23px;
+}
+
+.btn-primary {
+    background-color: #0020b9;
+    border-color: #091b7a;
+    /*border-radius: 6px;*/
+    /*border-width: 3px;*/
+    /*border-style: solid;*/
+}
+.btn-primary:hover {
+    background: #081b52;
+    border-color: #081b52;
+    color: white;
+}
+.content-buttons {
+    margin-top: 8px;
+}
+
+.my-form {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 0;
+}
+
+.my-event-form {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 0;
+}
+
+.my-event-form .btn-primary{
+    margin-right: 20px;
+    max-width: 250px;
+    height: 40px;
+}
+
+.container .content {
+    color: white;
+    border-radius: 3px;
+}
+
+.container {
+    padding: 0 0 0 0;
+}
+
+.container .form-group {
+    background: rgba(29, 26, 26, 0.78);
+}
+
+.content {
+    color: #eaeaea;
+    background: rgba(30, 27, 27, 0.81);
+    margin-top: 25px;
+    padding-top: 1px;
+    border-radius: 14px;
+    font-size: 12px;
+}
+@media (max-width: 425px) {
+    .container {overflow: hidden;}
+}
+
+.my-form{
+    margin-bottom: 15px;
+}
+
+header,
+footer {
+    background: rgb(2, 25, 115);
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.new-event-button{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+p{
+    margin-bottom: 4px;
+    margin-left: 10px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.detailed-button {
+    margin-bottom: 15px;
+    padding: 0 0 0 0;
+}
+
+.my-form form {
+    width: 33.3%;
+    padding: 0;
+}
+
+.my-form form .btn-primary{
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    border: 2px none #000000;
+    border-left-style: solid;
+    margin: 0;
+}
+
+hr {
+    margin: 0 0 20px;
+}
+
+.modal-header {
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 7px;
+    background: rgba(29, 26, 26, 0.78);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.event-form {
+    padding: 10px 40px 10px 40px;
+    margin-top: 20px;
+    border-radius: 7px;
+    color: white;
+}
+
+.event-form .form-control {
+    color: white;
+    border: 1px solid #00000000;
+    background-color: #00000000;
+}
+
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button {
+    box-shadow: none !important;
+}
+
+.event-form label {
+    margin-left: 10px;
+}
+
+.back-button {
+    text-align: right;
+}
+
+.back-button .btn-primary {
+    width: 120px;
+}
+
+.row {
+    font-size: 16px;
+}
+
+strong {
+    margin-left: 10px;
+}
+
+.event-form .form-control {
+    padding-top: 7px;
+    padding-bottom: 0;
+}
+
+.event-form label {
+    margin-left: 13px;
+}
+
+.modal-body .container .form-group {
+    background-color: white;
+}
+
+.modal-body .form-group {
+    background-color: white;
+    margin-bottom: -9px;
+}
+
+.modal-body .form-group label {
+    margin-bottom: 5px;
+}
+
+.modal-body .form-group p {
+    margin-left: 0;
+}
+
+
+
+

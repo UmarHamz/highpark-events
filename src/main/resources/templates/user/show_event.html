@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" th:href="@{/content/images/faviconV2.ico}" type="image/x-icon">
+<link rel="stylesheet" th:href="@{/content/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/content/css/style.css}">
+<title>Highpark Events</title>
+</head>
+
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <div class="main-image">
+                    <img src="https://grozpark.ru/wp-content/uploads/2021/09/Logo-Highpark-White.png" alt="(((">
+                </div>
+            </div>
+            <div class="col-10">
+                <h2 class="text-center text-white">Регистрация мероприятий в Хайпарке ГГНТУ</h2>
+            </div>
+            <div class="col-1">
+                <form th:action="@{/login}" th:method="GET">
+                    <button type="submit" class="btn btn-primary">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container event-form">
+    <form th:object="${event}">
+
+        <div class="form-group">
+            <label for="user_name">Имя</label>
+            <input class="form-control" type="text" id="user_name"  th:value="${event.getUser_name()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="user_surname">Фамилия</label>
+            <input class="form-control" type="text" id="user_surname" th:value="${event.getUser_surname()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="user_mail">Email</label>
+            <input class="form-control" type="text" id="user_mail" th:value="${event.getUser_mail()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="user_number">Телефон для связи</label>
+            <input class="form-control" type="number" id="user_number" th:value="${event.getUser_number()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="user_post">Должность</label>
+            <input class="form-control" type="text" id="user_post" th:value="${event.getUser_post()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="event_name">Название мероприятия</label>
+            <input class="form-control" type="text" id="event_name" th:value="${event.getEvent_name()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="event_description">Короткое описание мероприятия</label>
+            <textarea class="form-control" id="event_description" th:field="*{event_description}" th:value="${event.getEvent_description()}" disabled></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="date_and_time">Дата и время проведения мероприятия</label>
+            <input class="form-control" type="text" id="date_and_time" th:value="${event.getDate_and_time()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <p>Требуемые залы</p>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{kvazar}" th:value="${event.getKvazar()}" disabled>
+                    Квазар - лекционный зал на 70 человек
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{narnia}" th:value="${event.getNarnia()}" disabled>
+                    Нарния - лекционный зал на 75 человек
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{gargantua}" th:value="${event.getGargantua()}" disabled>
+                    Гаргантюа - зал на 30 человек (стулья с пюпитром)
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{pulsar}" th:value="${event.getPulsar()}" disabled>
+                    Пульсап - зал на 40 человек (с большими столами)
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{hovran}" th:value="${event.getHovran()}" disabled>
+                    Ховран - зал на 20 человек (с пуфами)
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{rck}" th:value="${event.getRck()}" disabled>
+                    РЦК - зал на 20 человек (круглый стол)
+                </label>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="number_of_participants">Ориентировочное число участников</label>
+            <input class="form-control" type="text" id="number_of_participants"
+                   th:value="${event.getNumber_of_participants()}" disabled>
+        </div>
+
+        <div class="form-group">
+            <p>Необходимое оборудование</p>
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{projector}" th:value="${event.getProjector()}" disabled>
+                    Проектор
+                </label>
+            </div>
+
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{laptop}" th:value="${event.getLaptop()}" disabled>
+                    Ноутбук
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{clicker}" th:value="${event.getClicker()}" disabled>
+                    Кликер
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{interactive_whiteboard}" th:value="${event.getInteractive_whiteboard()}" disabled>
+                    Интерактивная доска
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{printer}" th:value="${event.getPrinter()}" disabled>
+                    Принтер
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{microphone}" th:value="${event.getMicrophone()}" disabled>
+                    Микрофоны
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{photo_camera}" th:value="${event.getPhoto_camera()}" disabled>
+                    Фотоаппарат
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" th:field="*{nothing}" th:value="${event.getNothing()}" disabled>
+                    Ничего из перечисленного
+                </label>
+            </div>
+        </div>
+
+        <div class="back-button">
+            <button class="btn btn-primary" type="submit"><a th:href="@{/user/events}">Назад</a></button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>

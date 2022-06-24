@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" th:href="@{/content/images/faviconV2.ico}" type="image/x-icon">
+<link  rel="stylesheet" th:href="@{/content/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/content/css/style.css}">
+<title>Highpark Events</title>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <div class="main-image">
+                    <img src="https://grozpark.ru/wp-content/uploads/2021/09/Logo-Highpark-White.png" alt="(((">
+                </div>
+            </div>
+            <div class="col-10">
+                <h2 class="text-center text-white">Регистрация мероприятий в Хайпарке ГГНТУ</h2>
+            </div>
+            <div class="col-1">
+                <form th:action="@{/logout}" th:method="POST">
+                    <button type="submit" class="btn btn-primary">Выйти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container content">
+    <div class="my-form">
+        <form th:method="GET" th:action="@{/tutor/events/new}">
+            <button type="submit" class="btn btn-primary content-buttons">Новые</button>
+            <input type="hidden" name="status" value="new">
+        </form>
+
+        <form th:method="GET" th:action="@{/tutor/events/to-work}">
+            <button type="submit" class="btn btn-primary content-buttons">В работе</button>
+            <input type="hidden" name="status" value="to-work">
+        </form>
+
+        <form th:method="GET" th:action="@{/tutor/events/confirmed}">
+            <button type="submit" class="btn btn-primary content-buttons">
+                Одобренные
+            </button>
+            <input type="hidden" name="status" value="confirmed">
+        </form>
+    </div>
+
+
+    <div class="row text-center" th:each="eventForm : ${allEvents}">
+        <div class="col-12">
+
+            <hr>
+
+            <div class="cell">
+                <strong>Название мероприя:</strong>
+                <p th:text="${eventForm.getEvent_name()}">Образовательная программа «Роль семейных традиций в воспитании детей»</p>
+            </div>
+            <div class="cell">
+                <strong>Описание мероприя:</strong>
+                <p th:text="${eventForm.getEvent_description()}">Образовательная программа «Роль семейных традиций в воспитании детей» направлена на повышение знаний и компетенций родителей в вопросах внутрисемейных взаимоотношений на основе традиций, физического воспитания и развития детей.</p>
+            </div>
+            <div class="cell">
+                <strong>Организатор:</strong>
+                <p th:text="${eventForm.getUser_name()}">Хаджимурадова Мадина Рамзановна</p>
+            </div>
+            <div class="cell">
+                <strong>Должность:</strong>
+                <p th:text="${eventForm.getUser_post()}">Преподаватель</p>
+            </div>
+            <div class="cell">
+                <strong>Дата и время проведения:</strong>
+                <p th:text="${eventForm.getDate_and_time()}">
+                    17 июня, 09:00 — 18 июня, 15:00 по Московскому времени
+                </p>
+            </div>
+
+        </div>
+
+<!--        <div class="detailed-button">-->
+<!--            <button type="button" class="btn btn-primary content-buttons">-->
+<!--                <a th:href="@{/user/events/:{id}(id=${eventForm.getId()})}">Подробнее</a>-->
+<!--            </button>-->
+<!--        </div>-->
+
+        <div class="detailed-button">
+            <form th:action="@{/tutor/events/:{id}(id=${eventForm.getId()})}" th:method="GET">
+                <button type="submit" class="btn btn-primary content-buttons">
+                    Подробнее
+                </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
