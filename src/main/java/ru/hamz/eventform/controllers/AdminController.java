@@ -23,7 +23,6 @@ public class AdminController {
     private final EventService eventService;
     private final UserDetailsServiceImpl userService;
 
-
     @Value("${spring.mail.host}")
     private String host;
     @Value("${spring.mail.port}")

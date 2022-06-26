@@ -37,9 +37,9 @@ public class User implements UserDetails {
 
     @Column(name = "role", nullable = false)
     @Enumerated(value = EnumType.STRING)
-    private ERole role;
+    private ru.hamz.eventform.models.ERole role;
 
-    public User(String email, String password, String firstName, String lastName, ERole role) {
+    public User(String email, String password, String firstName, String lastName, ru.hamz.eventform.models.ERole role) {
         this.email = email;
         this.password = password;
         this.firstName = firstName;

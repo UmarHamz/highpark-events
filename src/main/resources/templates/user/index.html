@@ -21,10 +21,6 @@
                 <h2 class="text-center text-white">Регистрация мероприятий в Хайпарке ГГНТУ</h2>
             </div>
             <div class="col-1">
-<!--                <form th:action="@{/login}" th:method="GET">-->
-<!--                    <button type="submit" class="btn btn-primary">Войти</button>-->
-<!--                </form>-->
-
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login_modal">
                     Войти
                 </button>
@@ -33,9 +29,7 @@
     </div>
 </header>
 
-
 <div class="container content">
-
     <div class="new-event-button">
         <button type="button" class="btn btn-primary content-buttons" data-bs-toggle="modal"
                 data-bs-target="#form-modal">
@@ -43,39 +37,30 @@
         </button>
     </div>
 
-
     <div class="row text-center" th:each="eventForm : ${allEvents}">
         <div class="col-12">
-
             <hr>
-
             <div class="cell">
                 <strong>Название мероприя:</strong>
-                <p th:text="${eventForm.getEvent_name()}">Образовательная программа «Роль семейных традиций в воспитании
-                    детей»</p>
+                <p th:text="${eventForm.getEvent_name()}"></p>
             </div>
             <div class="cell">
                 <strong>Описание мероприя:</strong>
-                <p th:text="${eventForm.getEvent_description()}">Образовательная программа «Роль семейных традиций в
-                    воспитании детей» направлена на повышение знаний и компетенций родителей в вопросах внутрисемейных
-                    взаимоотношений на основе традиций, физического воспитания и развития детей.</p>
+                <p th:text="${eventForm.getEvent_description()}"></p>
             </div>
             <div class="cell">
                 <strong>Организатор:</strong>
-                <p th:text="${eventForm.getUser_name()}">Хаджимурадова Мадина Рамзановна</p>
+                <p th:text="${eventForm.getUser_name()}"></p>
             </div>
             <div class="cell">
                 <strong>Должность :</strong>
-                <p th:text="${eventForm.getUser_post()}">Преподаватель</p>
+                <p th:text="${eventForm.getUser_post()}"></p>
             </div>
             <div class="cell">
                 <strong>Дата и время проведения:</strong>
-                <p th:text="${eventForm.getDate_and_time()}">
-                    17 июня, 09:00 — 18 июня, 15:00 по Московскому времени
-                </p>
+                <p th:text="${eventForm.getDate_and_time()}"></p>
             </div>
         </div>
-
         <div class="detailed-button">
             <form th:action="@{/user/events/:{id}(id=${eventForm.getId()})}" th:method="GET">
                 <button type="submit" class="btn btn-primary content-buttons">
@@ -116,23 +101,19 @@
                         <input class="form-control" required type="text" placeholder="Должность"
                                th:field="*{user_post}">
                     </div>
-
                     <div class="form-group">
                         <input class="form-control" required type="text" placeholder="Название мероприятия"
                                th:field="*{event_name}">
                     </div>
-
                     <div class="form-group">
                         <textarea class="form-control" required placeholder="Короткое описание мероприятия"
                                   th:field="*{event_description}"></textarea>
                     </div>
-
                     <div class="form-group">
                         <label for="date-and-time">Дата и время проведения</label>
                         <input class="form-control" id="date-and-time" required type="datetime-local"
                                th:field="*{date_and_time}">
                     </div>
-
                     <div class="form-group">
                         <p>Требуемые залы</p>
                         <label>
@@ -160,76 +141,62 @@
                             РЦК - зал на 20 человек (круглый стол)
                         </label>
                     </div>
-
                     <div class="form-group">
                         <label for="number_of_participants">Ориентировочное число участников</label>
                         <input class="form-control" required type="number" id="number_of_participants"
                                th:field="*{number_of_participants}">
                     </div>
-
-
                     <div class="form-group">
                         <p>Необходимое оборудование</p>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{projector}" value="">
                                 Проектор
                             </label>
                         </div>
-
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{laptop}" value="">
                                 Ноутбук
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{clicker}" value="">
                                 Кликер
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{interactive_whiteboard}" value="">
                                 Интерактивная доска
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{printer}" value="">
                                 Принтер
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{microphone}" value="">
                                 Микрофоны
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{photo_camera}" value="">
                                 Фотоаппарат
                             </label>
                         </div>
-
                         <div>
                             <label>
                                 <input type="checkbox" th:field="*{nothing}" value="">
                                 Ничего из перечисленного
                             </label>
                         </div>
-
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Отправить</button>

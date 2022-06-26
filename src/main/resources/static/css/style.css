@@ -1,6 +1,6 @@
 body{
-    /*background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),aliceblue url("https://downloader.disk.yandex.ru/preview/2e4cfb068892dd967796865e93bdc33ad3c4781bee67d15d0b1641d2faba53d8/62b67061/rwkD9hMSv8mrDGQe9E74CYUgS1-Nm9LT8L10EoObq0-yHrstHL8s8J2H3CbjkoDKe-oRPZiCuL2elZHKNMdsEQ%3D%3D?uid=0&filename=%D0%9F%D1%83%D0%BB%D1%8C%D1%81%D0%B0%D1%80%202.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1291x964") no-repeat fixed;*/
-    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),aliceblue url("../images/IMG_1113-2.webp") no-repeat fixed;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),aliceblue url("https://leader-id.storage.yandexcloud.net/space_hall_photo/560/8072fb88-7ef5-40a0-805c-e3613ba7f00d_520.png") no-repeat fixed;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),aliceblue url("../images/IMG_1113-2.webp") no-repeat fixed;
     background-size: cover;
     padding-bottom: 20px;
     line-height: 1.5;
@@ -48,11 +48,8 @@ a:hover{
 }
 
 .btn-primary {
-    background-color: #0020b9;
-    border-color: #091b7a;
-    /*border-radius: 6px;*/
-    /*border-width: 3px;*/
-    /*border-style: solid;*/
+    background-color: #081c79;
+    border-color: #04176c;
 }
 .btn-primary:hover {
     background: #081b52;
@@ -112,7 +109,7 @@ a:hover{
 
 header,
 footer {
-    background: rgb(2, 25, 115);
+    background: rgb(3, 19, 77);
     padding-top: 13px;
     padding-bottom: 13px;
 }

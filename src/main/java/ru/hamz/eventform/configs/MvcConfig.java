@@ -1,4 +1,4 @@
-package ru.hamz.eventform.config;
+package ru.hamz.eventform.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

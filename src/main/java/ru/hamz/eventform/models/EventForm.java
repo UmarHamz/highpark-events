@@ -107,4 +107,33 @@ public class EventForm {
                 (photo_camera ? "  - Фотоаппарат\n" : "") +
                 (nothing ? "  - Ничего из перечисленного\n" : "");
     }
+
+    public String toStringForTutorAndAdmin() {
+        return "Заявка: " + '\n' +
+                "Имя - " + user_name + '\n' +
+                "Фамилия - " + user_surname + '\n' +
+                "Почта - " + user_mail + '\n' +
+                "Номер телефона - " + user_number + '\n' +
+                "Должность - " + user_post + '\n' +
+                "Название мероприятия - " + event_name + '\n' +
+                "Описание мероприятия - " + event_description + '\n' +
+                "Дата и время проведения - " + date_and_time + '\n' +
+                "Залы: " + '\n' +
+                (kvazar ? "  - Квазар \n" : "") +
+                (narnia ? "  - Нарния \n" : "") +
+                (gargantua ? "  - Гаргантюа \n" : "") +
+                (pulsar ? "  - Пульсар \n" : "") +
+                (hovran ? "  - Ховран \n" : "") +
+                (rck ? "  - РЦК \n" : "")  +
+                "Предположительное колличество участников - " + number_of_participants + '\n' +
+                "Необходимое оборудование: " + '\n' +
+                (projector ? "  - Проектор\n" : "") +
+                (laptop ? "  - Ноутбук\n" : "") +
+                (clicker ? "  - Кликер \n" : "") +
+                (interactive_whiteboard ? "  - Интерактивная доска\n" : "") +
+                (printer ? "  - Принтер\n" : "") +
+                (microphone ? "  - Микрофон\n" : "") +
+                (photo_camera ? "  - Фотоаппарат\n" : "") +
+                (nothing ? "  - Ничего из перечисленного\n" : "");
+    }
 }

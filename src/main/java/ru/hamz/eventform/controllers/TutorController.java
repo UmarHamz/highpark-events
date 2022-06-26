@@ -91,7 +91,7 @@ public class TutorController {
             javaMailProperties.setProperty("mail.smtps.auth", mailSmtpsAuth);
 
             MailSender mailSender = new MailSender(javaMailSender);
-            mailSender.send(main.getEmail(), admin.getEmail(), "Поступила новая заявка", event.toString());
+            mailSender.send(main.getEmail(), admin.getEmail(), "Поступила новая заявка", event.toStringForTutorAndAdmin());
         }).start();
 
         eventService.changeEventStatus(id, "to-work");

@@ -61,7 +61,7 @@ public class UserController implements ErrorController {
 
             User user = userService.findByRole(ERole.ROLE_TUTOR);
 
-            mailSender.send(main.getEmail(), user.getEmail(), "Поступила новая заявка.", eventForm.toString());
+            mailSender.send(main.getEmail(), user.getEmail(), "Поступила новая заявка.", eventForm.toStringForTutorAndAdmin());
         }).start();
 
         eventService.saveEvent(eventForm);

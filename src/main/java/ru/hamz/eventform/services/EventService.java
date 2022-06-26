@@ -24,6 +24,7 @@ public class EventService {
         }
         event.setDate_and_time(event.getDate_and_time().replace('T', ' '));
         repository.save(event);
+        repository.flush();
         return true;
     }
 
@@ -41,6 +42,7 @@ public class EventService {
             throw new NoSuchElementException("No such event element with id: " + id);
         }
         repository.deleteById(id);
+        repository.flush();
         return true;
     }
 
@@ -48,6 +50,7 @@ public class EventService {
         EventForm event = findById(eventId);
         event.setStatus(status);
         repository.save(event);
+        repository.flush();
         return event;
     }
 }
