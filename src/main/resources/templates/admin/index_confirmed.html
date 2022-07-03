@@ -54,33 +54,26 @@
 
     <div class="row text-center" th:each="eventForm : ${allEvents}">
         <div class="col-12">
-
             <hr>
-
             <div class="cell">
                 <strong>Название мероприя:</strong>
-                <p th:text="${eventForm.getEvent_name()}">Образовательная программа «Роль семейных традиций в воспитании
-                    детей»</p>
+                <p th:text="${eventForm.getEvent_name()}"></p>
             </div>
             <div class="cell">
                 <strong>Описание мероприя:</strong>
-                <p th:text="${eventForm.getEvent_description()}">Образовательная программа «Роль семейных традиций в
-                    воспитании детей» направлена на повышение знаний и компетенций родителей в вопросах внутрисемейных
-                    взаимоотношений на основе традиций, физического воспитания и развития детей.</p>
+                <p th:text="${eventForm.getEvent_description()}"></p>
             </div>
             <div class="cell">
                 <strong>Организатор:</strong>
-                <p th:text="${eventForm.getUser_name()}">Хаджимурадова Мадина Рамзановна</p>
+                <p th:text="${eventForm.getUser_name()}"></p>
             </div>
             <div class="cell">
                 <strong>Должность:</strong>
-                <p th:text="${eventForm.getUser_post()}">Преподаватель</p>
+                <p th:text="${eventForm.getUser_post()}"></p>
             </div>
             <div class="cell">
-                <strong>Дата и время проведения:</strong>
-                <p th:text="${eventForm.getDate_and_time()}">
-                    17 июня, 09:00 — 18 июня, 15:00 по Московскому времени
-                </p>
+                <strong></strong>
+                <p th:text="${eventForm.getDate_and_time()}"></p>
             </div>
         </div>
 

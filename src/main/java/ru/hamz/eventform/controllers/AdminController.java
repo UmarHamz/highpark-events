@@ -34,7 +34,6 @@ public class AdminController {
     @Value("${mail.address}")
     private String mailAddress;
 
-
     @Autowired
     public AdminController(EventService eventService, UserDetailsServiceImpl userService) {
         this.eventService = eventService;

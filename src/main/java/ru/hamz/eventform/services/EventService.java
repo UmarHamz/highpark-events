@@ -21,11 +21,11 @@ public class EventService {
     public boolean saveEvent(EventForm event) {
         if (event == null) {
             return false;
+        } else {
+            event.setDate_and_time(event.getDate_and_time().replace('T', ' '));
+            repository.save(event);
+            return true;
         }
-        event.setDate_and_time(event.getDate_and_time().replace('T', ' '));
-        repository.save(event);
-        repository.flush();
-        return true;
     }
 
     public Iterable<EventForm> findAllByStatus(String status) {
@@ -40,17 +40,16 @@ public class EventService {
     public boolean deleteById(Long id) {
         if (!repository.existsById(id)) {
             throw new NoSuchElementException("No such event element with id: " + id);
+        } else {
+            repository.deleteById(id);
+            return true;
         }
-        repository.deleteById(id);
-        repository.flush();
-        return true;
     }
 
     public EventForm changeEventStatus(Long eventId, String status) {
         EventForm event = findById(eventId);
         event.setStatus(status);
         repository.save(event);
-        repository.flush();
         return event;
     }
 }

@@ -23,8 +23,6 @@ public class TutorController {
     private final EventService eventService;
     private final UserDetailsServiceImpl userService;
 
-
-
     @Value("${spring.mail.host}")
     private String host;
     @Value("${spring.mail.port}")
@@ -35,8 +33,6 @@ public class TutorController {
     private String mailSmtpsAuth;
     @Value("${mail.address}")
     private String mailAddress;
-
-
 
     @Autowired
     public TutorController(EventService eventService, UserDetailsServiceImpl userService) {
